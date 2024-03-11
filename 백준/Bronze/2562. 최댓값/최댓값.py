@@ -1,9 +1,7 @@
-maxNumber=0
-maxCount=0
+inputList=[]
+
 for i in range(9):
-    compNumber = int(input())
-    if maxNumber < compNumber:
-        maxNumber = compNumber
-        maxCount = i + 1
+    inputList.append(int(input()))
+maxNumber = max(inputList)
 print(maxNumber)
-print(maxCount)
+print(inputList.index(maxNumber)+1)
