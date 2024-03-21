@@ -1,16 +1,12 @@
 import sys
 
-repeat = int(input())
-numbers = {}
-for i in range(repeat):
-    num = int(sys.stdin.readline())
-    if num in numbers:
-        numbers[num] += 1
-    else:
-        numbers[num] = 1
+n = int(sys.stdin.readline())
+num_list = [0] * 10001
 
-snumbers = sorted(list(numbers.keys()))
-for i in snumbers:
-    iCount = numbers[i]
-    for j in range(iCount):
-        print(i)
+for _ in range(n):
+    num_list[int(sys.stdin.readline())] += 1
+
+for i in range(10001):
+    if num_list[i] != 0:
+        for j in range(num_list[i]):
+            print(i)
