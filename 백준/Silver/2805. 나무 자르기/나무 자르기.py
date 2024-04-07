@@ -13,7 +13,10 @@ while start <= end:
             # 자르기
             cnt += tree - mid
     # 자른 나무들의 길이가 목표값 이상이라면
-    if cnt >= m:
+    if cnt == m:
+        end = mid
+        break
+    if cnt > m:
         # 시작점 조정
         start = mid + 1
     # 목표값 이하라면
