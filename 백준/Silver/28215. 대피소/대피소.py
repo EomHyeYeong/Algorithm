@@ -12,7 +12,7 @@ shelters = list(combinations(locations, k)) # 모든 대피소 위치 경우의 
 globalMin = 10000000000 # 전체 거리 중 최소
 
 for shelter in shelters: # 대피소 경우의 수 중 하나 선택
-    newlocations = list(set(locations) - set(shelters)) # 대피소 아닌 집의 위치
+    newlocations = list(set(locations) - set(shelter)) # 대피소 아닌 집의 위치
     locMax = 0 # 집 사이의 거리 중 최대
     
     for loc in newlocations: # 한 집에 대해서 연산
